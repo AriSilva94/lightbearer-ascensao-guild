@@ -19,10 +19,14 @@ function App() {
   const [isOpenModal, setIsOpenModal] = useState(null);
 
   useEffect(() => {
+    getCharacters();
+  }, []);
+
+  const getCharacters = () => {
     getAll().then((personsFromDB) => {
       setCharacter(personsFromDB);
     });
-  }, []);
+  };
 
   const handleClick = (character, date, hour) => {
     add({ name: character, date: date, hour: hour }).then(
@@ -36,7 +40,6 @@ function App() {
   };
 
   const openModal = () => {
-    console.log("isOpenModal", isOpenModal);
     setIsOpenModal(true);
   };
 
@@ -51,7 +54,7 @@ function App() {
       <Add {...{ openModal }} />
       {/* <Filter /> */}
       <DataTable {...{ character }} />
-      <AddModal {...{ isOpenModal, closeModal, handleClick }} />
+      <AddModal {...{ isOpenModal, closeModal, handleClick, getCharacters }} />
     </div>
   );
 }

@@ -8,7 +8,12 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 
-export default function AddModal({ isOpenModal, closeModal, handleClick }) {
+export default function AddModal({
+  isOpenModal,
+  closeModal,
+  handleClick,
+  getCharacters,
+}) {
   dayjs.locale("pt-br");
   const [character, setCharacter] = useState("");
   const [value, setValue] = useState(null);
@@ -31,8 +36,8 @@ export default function AddModal({ isOpenModal, closeModal, handleClick }) {
 
     handleClick(formData.character, formData.date, formData.hour);
 
-    // Feche o modal após o envio do formulário
-    // closeModal();
+    getCharacters();
+    closeModal();
   };
 
   return (
