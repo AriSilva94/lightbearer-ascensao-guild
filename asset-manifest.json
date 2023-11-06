@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lightbearer-ascensao-guild/static/css/main.b091f838.css",
-    "main.js": "/lightbearer-ascensao-guild/static/js/main.6eb37992.js",
+    "main.js": "/lightbearer-ascensao-guild/static/js/main.b9c14c91.js",
     "index.html": "/lightbearer-ascensao-guild/index.html",
     "main.b091f838.css.map": "/lightbearer-ascensao-guild/static/css/main.b091f838.css.map",
-    "main.6eb37992.js.map": "/lightbearer-ascensao-guild/static/js/main.6eb37992.js.map"
+    "main.b9c14c91.js.map": "/lightbearer-ascensao-guild/static/js/main.b9c14c91.js.map"
   },
   "entrypoints": [
     "static/css/main.b091f838.css",
-    "static/js/main.6eb37992.js"
+    "static/js/main.b9c14c91.js"
   ]
 }
